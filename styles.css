@@ -1,4 +1,4 @@
-/* Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,33 +6,39 @@
 }
 
 body {
-  background-color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: white;
   color: black;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
 }
 
-/* Typography */
-h1, h2 {
-  font-family: 'Helvetica Neue', sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-p {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 300;
-}
-
-/* Header */
+/* Header Styles */
 header {
   position: relative;
   padding: 20px;
   text-align: center;
   background: white;
-  z-index: 10;
+  border-bottom: 1px solid #ccc;
 }
 
+/* Animated Rainbow Text */
+.rainbow-text {
+  font-size: 2rem;
+  font-weight: bold;
+  animation: rainbow 6s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { color: white; }
+  14% { color: red; }
+  28% { color: orange; }
+  42% { color: yellow; }
+  57% { color: green; }
+  71% { color: blue; }
+  85% { color: purple; }
+  100% { color: pink; }
+}
+
+/* Menu Button */
 .menu-button {
   position: absolute;
   top: 20px;
@@ -43,10 +49,11 @@ header {
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .menu-button:hover {
@@ -54,19 +61,19 @@ header {
   color: black;
 }
 
-/* Radial Menu */
+/* Radial Menu Popup */
 .menu-popup {
   position: absolute;
   top: 100px;
   right: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
   transform: scale(0);
   transform-origin: top right;
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.3s ease;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .menu-open .menu-popup {
@@ -80,9 +87,10 @@ header {
   color: white;
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   border-radius: 20px;
   text-align: center;
+  transition: background 0.3s ease;
 }
 
 .menu-popup a:hover {
@@ -90,82 +98,22 @@ header {
   color: black;
 }
 
-/* Hero Section */
-#hero {
-  padding: 60px 20px;
+/* Sample Sections */
+section {
+  padding: 80px 20px;
+  border-bottom: 1px solid #eee;
   text-align: center;
 }
 
-/* Project Gallery */
-.project-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
-}
-
-.project img {
-  width: 100%;
-  max-width: 600px;
-  display: block;
-}
-
-.caption {
-  text-align: center;
-  margin-top: 8px;
-  font-size: 0.8rem;
-  font-style: italic;
-}
-
-/* About Section */
-.about-container {
-  display: flex;
-  align-items: center;
-  padding: 60px 20px;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.portrait {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
-  color: white;
-}
-
-/* Mobile responsiveness */
 @media (max-width: 600px) {
   .menu-button {
     width: 80px;
     height: 80px;
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 
   .menu-popup {
+    top: 90px;
     right: 20px;
-    top: 100px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .portrait {
-    margin: 0 auto;
   }
 }
