@@ -2,57 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CARLOTTA :)</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body>
+
   <header>
-    <h1>CARLOTTA :)</h1>
-    <nav>
-      <button class="menu-button" onclick="toggleMenu()">:)</button>
-      <div class="menu-popup" id="popupMenu">
-        <a href="#hero">Design</a>
-        <a href="#art">Art</a>
-        <a href="#about">About Me</a>
-      </div>
-    </nav>
+    <div class="header-overlay">
+      <h1 class="rainbow-text">CARLOTTA :)</h1>
+    </div>
+    <button class="menu-button" onclick="toggleMenu()">:)</button>
+    <div class="menu-popup" id="popupMenu">
+      <a href="#art">Art</a>
+      <a href="#design">Design</a>
+      <a href="#about">About Me</a>
+    </div>
   </header>
 
-  <section id="about">
-    <div class="about-container">
-      <img src="images/portrait.jpg" alt="Portrait of Carlotta" class="portrait" loading="lazy">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          I'm Carlotta — a graphic designer from Bern, now based in Neukölln, Berlin. I combine precise craftsmanship with playful creativity. I love working with color, detail, and emotion to shape strong, thoughtful design. Whether it’s photography, illustration, or layout, I bring empathy and curiosity to everything I do.
-        </p>
-        <p>
-          I trained at the School of Design Bern/Biel and have experience in both design studios and hands-on creative work. I speak German, English, and French, and I believe in caring for the world and the people in it.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="art" class="project-gallery">
-    <img src="images/image01.jpg" alt="Project 1" loading="lazy" />
-    <img src="images/image05.jpg" alt="Project 2" loading="lazy" />
-    <!-- Add more <img> tags here as needed -->
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Carlotta</p>
-  </footer>
+  <section id="art"><h2>Art Section</h2></section>
+  <section id="design"><h2>Design Section</h2></section>
+  <section id="about"><h2>About Me</h2></section>
 
   <script>
     function toggleMenu() {
-      document.querySelector('nav').classList.toggle('menu-open');
+      document.body.classList.toggle('menu-open');
     }
+
+    document.addEventListener('click', function (e) {
+      const button = document.querySelector('.menu-button');
+      const menu = document.getElementById('popupMenu');
+      if (!button.contains(e.target) && !menu.contains(e.target)) {
+        document.body.classList.remove('menu-open');
+      }
+    });
   </script>
+
 </body>
 </html>
