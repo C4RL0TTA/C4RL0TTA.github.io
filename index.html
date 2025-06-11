@@ -10,8 +10,19 @@
   <header>
     <h1>CARLOTTA :)</h1>
     <nav>
-      <a href="#">:)</a>
-    </nav>
+  <button class="menu-button" onclick="toggleMenu()">:)</button>
+  <div class="menu-popup" id="popupMenu">
+    <a href="#">Design</a>
+    <a href="#">Art</a>
+    <a href="#">About Me</a>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('nav').classList.toggle('menu-open');
+  }
+</script>
   </header>
 
   <section id="hero">
