@@ -29,7 +29,7 @@ header {
 
 /* Rainbow title */
 .rainbow-text {
-  font-size: 3.5rem;
+  font-size: 6rem;
   font-weight: bold;
   animation: rainbow 6s infinite;
   color: white;
@@ -57,7 +57,7 @@ header {
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
   z-index: 20;
@@ -110,7 +110,7 @@ header {
   left: 50%;
 }
 .menu-open .menu-popup a:nth-child(2) {
-  top: 85%;
+  top: 60%;
   left: 0%;
 }
 .menu-open .menu-popup a:nth-child(3) {
