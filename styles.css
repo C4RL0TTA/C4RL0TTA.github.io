@@ -88,34 +88,28 @@ nav {
   color: #000;
 }
 
-/* Popup Circular Menu */
 .menu-popup {
   position: absolute;
-  top: 60px;
+  top: 0;
   right: 0;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform 0.3s ease;
   background: white;
   border-radius: 50%;
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: none;
-}
-
-.menu-popup a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 0.9rem;
-  text-transform: uppercase;
+  z-index: 3;
 }
 
 .menu-open .menu-popup {
-  display: flex;
+  transform: scale(1);
 }
 
 /* Hero Section */
