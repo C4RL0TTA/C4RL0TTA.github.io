@@ -5,68 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CARLOTTA :)</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <header>
-    <h1>CARLOTTA :)</h1>
-    <button class="menu-button" onclick="toggleMenu()">MENU :)</button>
+    <h1 class="rainbow-text">CARLOTTA :)</h1>
+    <button class="menu-button" onclick="toggleMenu()">:)</button>
     <div class="menu-popup" id="popupMenu">
-      <a href="#hero">Design</a>
       <a href="#art">Art</a>
-      <a href="#about">About</a>
+      <a href="#design">Design</a>
+      <a href="#about">About Me</a>
     </div>
   </header>
 
-  <section id="hero">
-    <h2>Hello, I’m Carlotta</h2>
-    <p>Graphic designer exploring colour, movement, and unexpected visuals.</p>
-  </section>
-
-  <section id="art" class="project-gallery">
-    <div class="project">
-      <img src="images/image01.jpg" alt="Artwork 1" />
-      <p class="caption">Acryl on Paper · 2023/05 · Berlin</p>
-    </div>
-    <div class="project">
-      <img src="images/image05.jpg" alt="Artwork 2" />
-      <p class="caption">Mixed Media · 2022/11 · Bern</p>
-    </div>
-    <!-- Add more projects as needed -->
-  </section>
-
-  <section id="about">
-    <div class="about-container">
-      <img src="images/portrait.jpg" alt="Portrait of Carlotta" class="portrait" />
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          I'm Carlotta — a graphic designer from Bern, now based in Neukölln, Berlin.
-          I combine precise craftsmanship with playful creativity. I love working with color, detail,
-          and emotion to shape thoughtful design. My experience includes photography, layout, illustration,
-          and visual storytelling. I speak German, English, and French, and care deeply about the environment
-          and human connection.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Carlotta</p>
-  </footer>
+  <!-- Sample sections to scroll to -->
+  <section id="art"><h2>Art Section</h2></section>
+  <section id="design"><h2>Design Section</h2></section>
+  <section id="about"><h2>About Me</h2></section>
 
   <script>
     function toggleMenu() {
-      document.querySelector('header').classList.toggle('menu-open');
+      document.body.classList.toggle('menu-open');
     }
 
+    // Close menu when clicking outside
     document.addEventListener('click', function (e) {
-      const header = document.querySelector('header');
       const button = document.querySelector('.menu-button');
-      const menu = document.querySelector('.menu-popup');
+      const menu = document.getElementById('popupMenu');
       if (!button.contains(e.target) && !menu.contains(e.target)) {
-        header.classList.remove('menu-open');
+        document.body.classList.remove('menu-open');
       }
     });
   </script>
