@@ -11,21 +11,30 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Header */
+/* Header with background image */
 header {
   position: relative;
-  padding: 20px;
-  text-align: center;
-  background: white;
-  border-bottom: 1px solid #ccc;
+  height: 100vh;
+  background: url('images/image04.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Rainbow animated title */
-.rainbow-text {
-  font-size: 2rem;
-  font-weight: bold;
-  animation: rainbow 6s linear infinite;
+.header-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
 }
+
+/* Rainbow title */
+.rainbow-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  animation: rainbow 6s infinite;
+  color: white;
+}
+
 @keyframes rainbow {
   0% { color: white; }
   14% { color: red; }
@@ -33,11 +42,11 @@ header {
   42% { color: yellow; }
   57% { color: green; }
   71% { color: blue; }
-  85% { color: purple; }
-  100% { color: pink; }
+  85% { color: violet; }
+  100% { color: white; }
 }
 
-/* Menu Button */
+/* Menu button */
 .menu-button {
   position: absolute;
   top: 20px;
@@ -59,7 +68,7 @@ header {
   color: black;
 }
 
-/* Radial Popup Menu */
+/* Radial popup menu */
 .menu-popup {
   position: absolute;
   top: 55px;
@@ -96,8 +105,6 @@ header {
 .menu-open .menu-popup a {
   opacity: 1;
 }
-
-/* Radial placement */
 .menu-open .menu-popup a:nth-child(1) {
   top: 0%;
   left: 50%;
@@ -111,17 +118,14 @@ header {
   left: 100%;
 }
 
-/* Responsive */
+/* Mobile-friendly */
 @media (max-width: 600px) {
   .menu-button {
     width: 80px;
     height: 80px;
     font-size: 2rem;
   }
-  .menu-open .menu-popup {
-    width: 160px;
-    height: 160px;
-    top: 50px;
-    right: 50px;
+  .rainbow-text {
+    font-size: 2.2rem;
   }
 }
