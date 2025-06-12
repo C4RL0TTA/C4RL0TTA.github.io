@@ -127,7 +127,7 @@ body {
 
 #hero {
   position: relative;
-  padding: 100px 20px;
+  padding: 100px 15px;
   text-align: center;
   background-color: white; /* or transparent if image is behind */
   z-index: 1;
@@ -140,7 +140,7 @@ body {
 }
 
 #hero p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   max-width: 600px;
   margin: 0 auto;
 }
