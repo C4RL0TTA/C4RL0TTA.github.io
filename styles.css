@@ -21,12 +21,6 @@ header {
   justify-content: center;
 }
 
-.header-overlay {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
 /* Rainbow title */
 .rainbow-text {
   font-size: 6rem;
