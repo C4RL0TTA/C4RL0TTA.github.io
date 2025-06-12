@@ -4,82 +4,81 @@
   <meta charset="UTF-8" />
   <title>CARLOTTA :)</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<script>
-  function toggleMenu() {
-    document.querySelector('nav').classList.toggle('menu-open');
-  }
-
-  // Close menu if clicking outside
-  document.addEventListener('click', function (e) {
-    const nav = document.querySelector('nav');
-    const button = document.querySelector('.menu-button');
-    const popup = document.querySelector('.menu-popup');
-
-    if (!nav.contains(e.target) && nav.classList.contains('menu-open')) {
-      nav.classList.remove('menu-open');
-    }
-  });
-</script>
-
 <body>
- <header class="header">
-  <img src="images/image04.jpg" alt="Header Image" class="header-image" />
-  <div class="header-blur-overlay"></div>
-  
-  <h1 class="site-title">CARLOTTA :)</h1>
-  
-  <nav>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img src="images/image04.jpg" alt="Header Image" class="header-image">
+    <div class="header-blur-overlay"></div>
+    <h1 class="site-title">CARLOTTA :)</h1>
+
+    <!-- MENU -->
     <button class="menu-button" onclick="toggleMenu()">:)</button>
     <div class="menu-popup" id="popupMenu">
-      <a href="#art">Art</a>
       <a href="#design">Design</a>
+      <a href="#art">Art</a>
       <a href="#about">About Me</a>
     </div>
-  </nav>
-</header>
+  </header>
 
-   <section id="about">
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <h2>Hello, I’m Carlotta</h2>
+    <p>Graphic designer exploring colour, movement, and unexpected visuals.</p>
+  </section>
+
+  <!-- PROJECT GALLERY -->
+  <section class="project-gallery" id="design">
+    <div class="project">
+      <img src="images/image01.jpg" alt="Project 1" />
+      <p>Acryl on paper – Berlin, 2023/05</p>
+    </div>
+    <div class="project">
+      <img src="images/image05.jpg" alt="Project 2" />
+      <p>Ink collage – Bern, 2022</p>
+    </div>
+    <!-- Add more projects here -->
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
     <div class="about-container">
       <img src="images/portrait.jpg" alt="Portrait of Carlotta" class="portrait">
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-          I'm Carlotta — a graphic designer from Bern, now based in Neukölln, Berlin. I combine precise craftsmanship with playful creativity. Whether it’s photography, illustration, or layout, I bring empathy and curiosity to everything I do.
+          I'm Carlotta — a graphic designer from Bern, now based in Neukölln, Berlin. I combine precise craftsmanship with playful creativity. I love working with color, detail, and emotion to shape strong, thoughtful design.
+        </p>
+        <p>
+          I trained at the School of Design Bern/Biel and have experience in both design studios and hands-on creative work. I speak German, English, and French, and I believe in caring for the world and the people in it.
         </p>
       </div>
     </div>
   </section>
-  
-  <section class="project-gallery" id="design">
-    <div class="project">
-      <img src="images/image01.jpg" alt="Project 1" />
-      <p>Acrylic on paper · Berlin 2023/05</p>
-    </div>
-    <div class="project">
-      <img src="images/image05.jpg" alt="Project 2" />
-      <p>Mixed media · Berlin 2024/01</p>
-    </div>
-  </section>
 
-
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Carlotta</p>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
-    const nav = document.querySelector('nav');
-    document.addEventListener('click', function (e) {
-      const button = document.querySelector('.menu-button');
-      const popup = document.getElementById('popupMenu');
-      if (!button.contains(e.target) && !popup.contains(e.target)) {
-        nav.classList.remove('menu-open');
-      }
-    });
+    const menuButton = document.querySelector('.menu-button');
+    const popupMenu = document.getElementById('popupMenu');
+    const nav = document.querySelector('header');
+
     function toggleMenu() {
       nav.classList.toggle('menu-open');
     }
+
+    document.addEventListener('click', function (e) {
+      if (!menuButton.contains(e.target) && !popupMenu.contains(e.target)) {
+        nav.classList.remove('menu-open');
+      }
+    });
   </script>
+
 </body>
 </html>
