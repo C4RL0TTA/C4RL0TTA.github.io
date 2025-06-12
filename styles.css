@@ -1,60 +1,62 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
+  margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
   background: white;
   color: black;
-  scroll-behavior: smooth;
 }
 
-/* Header with background image */
 header {
   position: relative;
-  height: 100vh;
-  background: url('images/image04.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-/* Rainbow title */
-.rainbow-text {
-  font-size: 6rem;
+.header-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+h1.rainbow-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
   font-weight: bold;
-  animation: rainbow 6s infinite;
   color: white;
+  animation: rainbow 6s infinite;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes rainbow {
-  0% { color: white; }
-  14% { color: red; }
-  28% { color: orange; }
-  42% { color: yellow; }
-  57% { color: green; }
-  71% { color: blue; }
-  85% { color: violet; }
-  100% { color: white; }
+  0%   { color: white; }
+  16%  { color: red; }
+  32%  { color: orange; }
+  48%  { color: yellow; }
+  64%  { color: green; }
+  80%  { color: blue; }
+  96%  { color: purple; }
+  100% { color: pink; }
 }
 
-/* Menu button */
 .menu-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
   background: black;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  font-size: 2rem;
-  font-weight: bold;
   cursor: pointer;
-  z-index: 20;
+  z-index: 4;
   transition: background 0.3s ease;
 }
 .menu-button:hover {
@@ -62,64 +64,108 @@ header {
   color: black;
 }
 
-/* Radial popup menu */
 .menu-popup {
   position: absolute;
-  top: 55px;
-  right: 55px;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-  z-index: 10;
-  transition: all 0.4s ease;
-}
-.menu-open .menu-popup {
+  top: 60px;
+  right: 30px;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
   width: 200px;
   height: 200px;
-  pointer-events: auto;
-}
-.menu-popup a {
-  position: absolute;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  background: black;
-  padding: 10px;
-  border-radius: 25px;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.4s ease, background 0.3s ease;
-}
-.menu-popup a:hover {
-  background: yellow;
-  color: black;
-}
-.menu-open .menu-popup a {
-  opacity: 1;
-}
-.menu-open .menu-popup a:nth-child(1) {
-  top: 0%;
-  left: 50%;
-}
-.menu-open .menu-popup a:nth-child(2) {
-  top: 60%;
-  left: 0%;
-}
-.menu-open .menu-popup a:nth-child(3) {
-  top: 85%;
-  left: 100%;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 3;
+  pointer-events: none;
 }
 
-/* Mobile-friendly */
-@media (max-width: 600px) {
-  .menu-button {
-    width: 80px;
-    height: 80px;
-    font-size: 2rem;
+.menu-open .menu-popup {
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.menu-popup a {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: white;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.menu-popup a:nth-child(1) { top: 10%; left: 50%; }
+.menu-popup a:nth-child(2) { top: 70%; left: 15%; }
+.menu-popup a:nth-child(3) { top: 70%; left: 85%; }
+
+#hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.project img {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  display: block;
+}
+.project p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
   }
-  .rainbow-text {
-    font-size: 2.2rem;
+  .menu-button {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
   }
 }
