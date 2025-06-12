@@ -60,6 +60,10 @@ body {
   85%  { color: purple; }
   100% { color: pink; }
 }
+.site-title {
+  /* existing styles... */
+  text-shadow: 2px 2px 8px rgba(0.1, 0, 0.1, 0.1); /* <-- Light shadow effect */
+}
 
 /* === MENU BUTTON === */
 .menu-button {
