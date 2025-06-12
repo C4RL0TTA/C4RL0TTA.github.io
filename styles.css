@@ -8,8 +8,8 @@ body {
 /* HEADER & IMAGE */
 .header {
   position: relative;
-  overflow: hidden;
   height: 400px;
+  overflow: hidden;
 }
 
 .header-image {
@@ -17,6 +17,10 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .header-blur-overlay {
@@ -30,19 +34,35 @@ body {
   z-index: 1;
 }
 
+/* Title Styling */
 .site-title {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
-  color: white;
-  border: 2px solid white;
+  font-weight: bold;
   padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
   z-index: 2;
+  animation: rainbowText 8s linear infinite;
 }
+
+/* Rainbow color animation */
+@keyframes rainbowText {
+  0%   { color: white; }
+  14%  { color: red; }
+  28%  { color: orange; }
+  42%  { color: yellow; }
+  57%  { color: green; }
+  71%  { color: blue; }
+  85%  { color: purple; }
+  100% { color: pink; }
+}
+
 
 /* MENU BUTTON */
 .menu-button {
