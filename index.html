@@ -16,11 +16,15 @@
 
     <!-- MENU -->
     <button class="menu-button" onclick="toggleMenu()">:)</button>
-    <div class="menu-popup" id="popupMenu">
-      <a href="#design">Design</a>
-      <a href="#art">Art</a>
-      <a href="#about">About Me</a>
-    </div>
+   <nav>
+  <button class="menu-button" onclick="toggleMenu()">:)</button>
+  <div class="menu-popup" id="popupMenu">
+    <a href="#design">Design</a>
+    <a href="#art">Art</a>
+    <a href="#about">About Me</a>
+  </div>
+</nav>
+
   </header>
 
   <!-- HERO SECTION -->
@@ -70,8 +74,16 @@
     const nav = document.querySelector('header');
 
     function toggleMenu() {
-      nav.classList.toggle('menu-open');
-    }
+  document.querySelector('nav').classList.toggle('menu-open');
+}
+
+document.addEventListener('click', function (e) {
+  const nav = document.querySelector('nav');
+  if (!nav.contains(e.target)) {
+    nav.classList.remove('menu-open');
+  }
+});
+
 
     document.addEventListener('click', function (e) {
       if (!menuButton.contains(e.target) && !popupMenu.contains(e.target)) {
