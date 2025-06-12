@@ -36,10 +36,10 @@ body {
 
 .site-title {
   position: absolute;
-  top: 45%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 4.5rem;
+  font-size: 4.7rem;
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'Helvetica Neue', sans-serif;
