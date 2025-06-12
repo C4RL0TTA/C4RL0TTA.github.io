@@ -2,41 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CARLOTTA :)</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <header>
-    <div class="header-overlay">
-      <h1 class="rainbow-text">CARLOTTA :)</h1>
-    </div>
-    <button class="menu-button" onclick="toggleMenu()">:)</button>
-    <div class="menu-popup" id="popupMenu">
-      <a href="#art">Art</a>
-      <a href="#design">Design</a>
-      <a href="#about">About Me</a>
-    </div>
+    <img src="images/image04.jpg" alt="Header background" class="header-image" />
+    <h1 class="rainbow-text">CARLOTTA :)</h1>
+    <nav>
+      <button class="menu-button" onclick="toggleMenu()">:)</button>
+      <div class="menu-popup" id="popupMenu">
+        <a href="#design">Design</a>
+        <a href="#art">Art</a>
+        <a href="#about">About Me</a>
+      </div>
+    </nav>
   </header>
 
-  <section id="art"><h2>Art Section</h2></section>
-  <section id="design"><h2>Design Section</h2></section>
-  <section id="about"><h2>About Me</h2></section>
+  <section id="hero">
+    <h2>Hello, I’m Carlotta</h2>
+    <p>Graphic designer exploring colour, movement, and unexpected visuals.</p>
+  </section>
+
+  <section class="project-gallery" id="design">
+    <div class="project">
+      <img src="images/image01.jpg" alt="Project 1" />
+      <p>Acrylic on paper · Berlin 2023/05</p>
+    </div>
+    <div class="project">
+      <img src="images/image05.jpg" alt="Project 2" />
+      <p>Mixed media · Berlin 2024/01</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-container">
+      <img src="images/portrait.jpg" alt="Portrait of Carlotta" class="portrait">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I'm Carlotta — a graphic designer from Bern, now based in Neukölln, Berlin. I combine precise craftsmanship with playful creativity. Whether it’s photography, illustration, or layout, I bring empathy and curiosity to everything I do.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Carlotta</p>
+  </footer>
 
   <script>
-    function toggleMenu() {
-      document.body.classList.toggle('menu-open');
-    }
-
+    const nav = document.querySelector('nav');
     document.addEventListener('click', function (e) {
       const button = document.querySelector('.menu-button');
-      const menu = document.getElementById('popupMenu');
-      if (!button.contains(e.target) && !menu.contains(e.target)) {
-        document.body.classList.remove('menu-open');
+      const popup = document.getElementById('popupMenu');
+      if (!button.contains(e.target) && !popup.contains(e.target)) {
+        nav.classList.remove('menu-open');
       }
     });
+    function toggleMenu() {
+      nav.classList.toggle('menu-open');
+    }
   </script>
-
 </body>
 </html>
