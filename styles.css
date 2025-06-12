@@ -125,6 +125,27 @@ body {
 .menu-popup a:nth-child(2) { top: 70%; left: 15%; }
 .menu-popup a:nth-child(3) { top: 70%; left: 85%; }
 
+#hero {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  background-color: white; /* or transparent if image is behind */
+  z-index: 1;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
 /* === PROJECTS === */
 .project-gallery {
   display: flex;
