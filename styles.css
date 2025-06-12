@@ -90,9 +90,9 @@ body {
 /* === RADIAL MENU === */
 .menu-popup {
   position: absolute;
-  top: 60px;
-  right: 30px;
-  transform: scale(0);
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) scale(0);
   transform-origin: center;
   transition: transform 0.4s ease;
   width: 200px;
@@ -104,7 +104,7 @@ body {
 }
 
 .menu-open .menu-popup {
-  transform: scale(1);
+  transform: translate(50%, -50%) scale(1);
   pointer-events: auto;
 }
 
