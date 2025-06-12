@@ -9,7 +9,7 @@ body {
 /* === HEADER === */
 .header {
   position: relative;
-  height: 95vh; /* 95% of the screen height */
+  height: 90vh; /* 90% of the screen height */
   overflow: hidden;
 }
 
@@ -39,7 +39,7 @@ body {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'Helvetica Neue', sans-serif;
