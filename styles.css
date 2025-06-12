@@ -62,7 +62,7 @@ body {
 }
 .site-title {
   /* existing styles... */
-  text-shadow: 2px 2px 8px rgba(0.1, 0, 0.1, 0.1); /* <-- Light shadow effect */
+  text-shadow: 2px 2px 8px rgba(0.0, 0, 0.0, 0.2); /* <-- Light shadow effect */
 }
 
 /* === MENU BUTTON === */
