@@ -91,38 +91,31 @@ body {
 .menu-popup {
   position: absolute;
   top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%) scale(0);
-  transform-origin: center;
-  transition: transform 0.4s ease;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: transparent;
-  z-index: 2;
+  right: 80px;
+  display: flex;
+  gap: 10px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
   pointer-events: none;
+  z-index: 4;
 }
 
 .menu-open .menu-popup {
-  transform: translate(50%, -50%) scale(1);
+  transform: scaleX(1);
   pointer-events: auto;
 }
 
 .menu-popup a {
-  position: absolute;
-  width: 80px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
   background: white;
-  color: black;
-  font-weight: bold;
-  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 20px;
   text-decoration: none;
-  border-radius: 15px;
   font-size: 0.75rem;
-  transition: all 0.3s ease;
-  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .menu-popup a:nth-child(1) { top: 10%; left: 50%; }
