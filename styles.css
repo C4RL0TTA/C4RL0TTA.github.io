@@ -141,7 +141,47 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
+/* === DESIGNPROJECTS === */
+.designprojects-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
 
+.designprojects img {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  display: block;
+}
+
+.designprojects p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+#designproject {
+  position: relative;
+  padding: 100px 15px;
+  text-align: left;
+  background-color: white; /* or transparent if image is behind */
+  z-index: 1;
+}
+
+#designproject h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#designproject p {
+  font-size: 1.6rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 /* === PROJECTS === */
 .project-gallery {
