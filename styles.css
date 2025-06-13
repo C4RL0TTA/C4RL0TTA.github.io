@@ -90,8 +90,8 @@ body {
 /* === RADIAL MENU === */
 .menu-popup {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 45px;
+  right: 42px;
   display: flex;
   gap: 10px;
   transform: scaleX(0);
