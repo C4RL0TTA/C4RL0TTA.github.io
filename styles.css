@@ -91,7 +91,7 @@ body {
 .menu-popup {
   position: absolute;
   top: 40px;
-  right: 80px;
+  right: 40px;
   display: flex;
   gap: 10px;
   transform: scaleX(0);
