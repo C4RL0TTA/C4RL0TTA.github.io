@@ -42,16 +42,23 @@
   </section>
 
   <!-- PROJECT GALLERY -->
-  <section class="project-gallery" id="design-gallery">
-    <div class="project">
-      <img src="images/image01.jpg" alt="Project 1" />
-      <p>Acryl on paper – Berlin, 2023/05</p>
+<section id="design-gallery" class="slider-section">
+  <div class="slider-wrapper">
+    <button class="slider-button prev" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="slider" id="slider">
+      <div class="slide">
+        <img src="images/image01.jpg" alt="Project 1" />
+        <p>Acryl on paper – Berlin, 2023/05</p>
+      </div>
+      <div class="slide">
+        <img src="images/image03.jpg" alt="Project 2" />
+        <p>Acryl on paper – Berlin, 2023/05</p>
+      </div>
+      <!-- Add more .slide divs if needed -->
     </div>
-    <div class="project">
-      <img src="images/image03.jpg" alt="Project 2" />
-      <p>Acryl on paper – Berlin, 2023/05</p>
-    </div>
-  </section>
+    <button class="slider-button next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+</section>
 
   <!-- ABOUT ME -->
   <section id="about">
