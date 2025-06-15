@@ -15,15 +15,14 @@
     <h1 class="site-title">CARLOTTA :)</h1>
 
     <!-- MENU -->
- <nav>
-  <button class="menu-button" onclick="toggleMenu()">:)</button>
-  <div class="menu-popup" id="popupMenu">
-    <a href="#design">Design</a>
-    <a href="#art">Art</a>
-    <a href="#about">About Me</a>
-  </div>
-</nav>
-
+    <button class="menu-button" onclick="toggleMenu()">:)</button>
+    <nav>
+      <div class="menu-popup" id="popupMenu">
+        <a href="#design">Design</a>
+        <a href="#design-gallery">Art</a>
+        <a href="#about">About Me</a>
+      </div>
+    </nav>
   </header>
 
   <!-- HERO SECTION -->
@@ -32,15 +31,16 @@
     <p>Graphic designer exploring colour, movement, and unexpected visuals.</p>
   </section>
 
-    <section id="design">
+  <!-- DESIGN SECTION -->
+  <section id="design">
     <h2>GRAPHIC DESIGN :)</h2>
-    <p>I love working with Illustrations. My design process always starts with sketching and collecting ideas through discovering new spaces and bodies a long the way.</p>
-       <div class="designproject">
+    <p>I love working with Illustrations. My design process always starts with sketching and collecting ideas through discovering new spaces and bodies along the way.</p>
+    <div class="designproject">
       <img src="images/image06.jpg" alt="designproject" />
       <p>Logo - Pot Cast – Berlin, 2024/07</p>
     </div>
   </section>
-  
+
   <!-- PROJECT GALLERY -->
   <section class="project-gallery" id="design-gallery">
     <div class="project">
@@ -51,7 +51,6 @@
       <img src="images/image03.jpg" alt="Project 2" />
       <p>Acryl on paper – Berlin, 2023/05</p>
     </div>
-    <!-- Add more projects here -->
   </section>
 
   <!-- ABOUT ME -->
@@ -77,24 +76,16 @@
 
   <!-- SCRIPT -->
   <script>
-    const menuButton = document.querySelector('.menu-button');
-    const popupMenu = document.getElementById('popupMenu');
-    const nav = document.querySelector('header');
-
     function toggleMenu() {
-  document.querySelector('nav').classList.toggle('menu-open');
-}
-
-document.addEventListener('click', function (e) {
-  const nav = document.querySelector('nav');
-  if (!nav.contains(e.target)) {
-    nav.classList.remove('menu-open');
-  }
-});
-
+      document.querySelector('nav').classList.toggle('menu-open');
+    }
 
     document.addEventListener('click', function (e) {
-      if (!menuButton.contains(e.target) && !popupMenu.contains(e.target)) {
+      const nav = document.querySelector('nav');
+      const button = document.querySelector('.menu-button');
+      const popupMenu = document.getElementById('popupMenu');
+
+      if (!button.contains(e.target) && !popupMenu.contains(e.target)) {
         nav.classList.remove('menu-open');
       }
     });
