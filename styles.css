@@ -11,6 +11,31 @@ img, video {
   height: auto;
   display: block;
 }
+/* === GENERAL SECTION PADDING === */
+section {
+  padding: 60px 20px;
+}
+
+/* === SLIDES === */
+.slide {
+  padding: 20px 10px;
+}
+
+/* === HERO SECTION === */
+#hero {
+  padding: 100px 20px;
+}
+
+/* === DESIGN PROJECT === */
+.designproject {
+  padding: 100px 20px;
+}
+
+/* === ABOUT SECTION === */
+.about-container {
+  padding: 60px 20px;
+  gap: 40px;
+}
 
 /* === HEADER === */
 .header {
@@ -144,7 +169,7 @@ img, video {
   background-color: white;
 }
 
-  .designproject h2 {
+.designproject h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
   text-transform: uppercase;
