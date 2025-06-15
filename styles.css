@@ -276,3 +276,9 @@ footer {
     font-size: 6rem;
   }
 }
+@media (max-width: 480px) {
+  .project img,
+  .designprojects img {
+    max-width: 90vw;
+  }
+}
