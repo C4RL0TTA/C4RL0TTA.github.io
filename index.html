@@ -97,6 +97,16 @@
       }
     });
   </script>
+<script>
+  let currentSlide = 0;
+
+  function moveSlide(direction) {
+    const slides = document.querySelectorAll(".slide");
+    const slider = document.getElementById("slider");
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+</script>
 
 </body>
 </html>
