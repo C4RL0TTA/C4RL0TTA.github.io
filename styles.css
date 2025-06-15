@@ -69,8 +69,8 @@ img, video {
 /* === MENU === */
 .menu-button {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 5%;
+  right: 5%;
   background: black;
   color: white;
   font-size: 2rem;
@@ -90,8 +90,8 @@ img, video {
 
 .menu-popup {
   position: absolute;
-  top: 60px;
-  right: 110px;
+  top: 7%;
+  right: 10%;
   display: flex;
   gap: 10px;
   transform: scaleX(0);
@@ -249,12 +249,12 @@ footer {
 
 .prev {
   position: absolute;
-  left: 40px;
+  left: 5%;
 }
 
 .next {
   position: absolute;
-  right: 40px;
+  right: 5%;
 }
 
 @media (max-width: 600px) {
@@ -289,7 +289,7 @@ footer {
 
 @media (max-width: 480px) {
   .site-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 }
 
