@@ -285,3 +285,22 @@ footer {
     max-width: 90vw;
   }
 }
+
+/* Base styles for mobile first */
+body {
+  font-size: 16px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
