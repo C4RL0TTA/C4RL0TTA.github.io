@@ -1,7 +1,4 @@
 /* === BASE STYLES === */
-html {
-  scroll-behavior: smooth;
-}
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -9,10 +6,16 @@ body {
   color: black;
 }
 
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* === HEADER === */
 .header {
   position: relative;
-  height: 90vh; /* 90% of the screen height */
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -48,8 +51,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   color: white;
   z-index: 2;
-  border: 0px solid white;
-  padding: 10px 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   animation: rainbow 8s linear infinite;
 }
 
@@ -63,12 +65,8 @@ body {
   85%  { color: purple; }
   100% { color: pink; }
 }
-.site-title {
-  /* existing styles... */
-  text-shadow: 2px 2px 8px rgba(0.0, 0, 0.0, 0.4); /* <-- Light shadow effect */
-}
 
-/* === MENU BUTTON === */
+/* === MENU === */
 .menu-button {
   position: absolute;
   top: 40px;
@@ -90,7 +88,6 @@ body {
   color: black;
 }
 
-/* === RADIAL MENU === */
 .menu-popup {
   position: absolute;
   top: 60px;
@@ -111,26 +108,21 @@ body {
 
 .menu-popup a {
   background: white;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 20px;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: bold;
   color: black;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-.menu-popup a:nth-child(1) { top: 10%; left: 50%; }
-.menu-popup a:nth-child(2) { top: 70%; left: 15%; }
-.menu-popup a:nth-child(3) { top: 70%; left: 85%; }
-
+/* === HERO === */
 #hero {
-  position: relative;
-  padding: 100px 15px;
+  padding: 80px 15px;
   text-align: center;
-  background-color: white; /* or transparent if image is behind */
-  z-index: 1;
+  background-color: white;
 }
 
 #hero h2 {
@@ -144,46 +136,12 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
-/* === DESIGNPROJECTS === */
-.designprojects-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  gap: 20px;
-}
 
-.designprojects img {
-  width: 100%;
-  max-width: 400px;
-  border: none;
+/* === DESIGN SECTION === */
+.designproject img {
+  max-width: 100%;
+  height: auto;
   display: block;
-}
-
-.designprojects p {
-  text-align: center;
-  font-size: 0.9rem;
-  margin-top: 5px;
-}
-
-#designproject {
-  position: relative;
-  padding: 100px 15px;
-  text-align: left;
-  background-color: white; /* or transparent if image is behind */
-  z-index: 1;
-}
-
-#designproject h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-#designproject p {
-  font-size: 1.6rem;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 /* === PROJECTS === */
@@ -196,8 +154,8 @@ body {
 }
 
 .project img {
-  width: 100%;
-  max-width: 400px;
+  max-width: 100%;
+  height: auto;
   border: none;
   display: block;
 }
@@ -238,69 +196,19 @@ footer {
   font-size: 0.9rem;
 }
 
-/* === MOBILE === */
-@media (max-width: 480px) {
-  #hero h2 {
-    font-size: 1.8rem;
-  }
-
-  #hero p {
-    font-size: 1.2rem;
-  }
-
-  .site-title {
-    font-size: 3rem;
-  }
-}
-
+/* === MOBILE MEDIA QUERIES === */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .menu-button {
-    width: 70px;
-    height: 70px;
-    font-size: 1.7rem;
+  .portrait {
+    margin: 0 auto;
   }
 
-  .menu-popup {
-    width: 160px;
-    height: 160px;
+  .about-text {
+    text-align: center;
   }
 
-  .menu-popup a {
-    font-size: 0.7rem;
-    width: 60px;
-  }
-
-  .site-title {
-    font-size: 6rem;
-  }
-}
-@media (max-width: 480px) {
-  .project img,
-  .designprojects img {
-    max-width: 90vw;
-  }
-}
-
-/* Base styles for mobile first */
-body {
-  font-size: 16px;
-}
-
-/* Tablet */
-@media (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  body {
-    font-size: 20px;
-  }
-}
+  .
