@@ -138,6 +138,24 @@ img, video {
 }
 
 /* === DESIGN SECTION === */
+.designproject {
+  padding: 80px 15px;
+  text-align: center;
+  background-color: white;
+}
+
+  .designproject h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.designproject p {
+  font-size: 1.6rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .designproject img {
   max-width: 100%;
   height: auto;
