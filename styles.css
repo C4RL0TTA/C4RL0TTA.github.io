@@ -238,7 +238,7 @@ footer {
 }
 
 .slider-button {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 1.0);
   color: white;
   font-size: 2rem;
   border: none;
@@ -249,12 +249,12 @@ footer {
 
 .prev {
   position: absolute;
-  left: 0;
+  left: 40px;
 }
 
 .next {
   position: absolute;
-  right: 0;
+  right: 40px;
 }
 
 @media (max-width: 600px) {
