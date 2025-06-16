@@ -14,7 +14,7 @@ img, video {
 /* Base styles */
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  background: #fff0f5;
+  background: #ffffff;
   color: #111;
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  background-color: #ff00cc;
+  background-color: #ffffff;
   color: white;
   padding: 20px;
   text-align: center;
@@ -36,7 +36,7 @@ footer {
   background: #111;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 7px;
   position: fixed;
   width: 100%;
   bottom: 0;
