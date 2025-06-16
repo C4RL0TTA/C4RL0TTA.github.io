@@ -6,20 +6,26 @@
   <title>Project 1 – Detailed View</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Close button styles */
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 2rem;
-      color: #ff00cc;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-    .close-btn:hover {
-      color: #ff69b4;
-    }
+ /* Close button styles */
+  .close-btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: black;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  z-index: 3;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff032d;
+}
     /* Gallery layout */
     .gallery {
       display: grid;
@@ -50,37 +56,31 @@
 </head>
 <body>
   <header>
-    <button class="close-btn" onclick="window.history.back();">❌</button>
+    <button class="close-btn" onclick="window.history.back();">X)</button>
     <h1>Project 1 – Detailed View</h1>
   </header>
 
   <section class="project-description">
-    <h2>Project Overview</h2>
-    <p>This project showcases...</p>
+    <h2>mother <3 </h2>
+    <p>who is mother? Where did she come from? What is her mission? In these drawings I am exploring my very own emotions about her as a cencient being inside all matter existing.</p>
     <!-- Add more detailed content here -->
   </section>
 
   <section class="gallery">
     <div>
-      <img src="images/art01.jpg" alt="Art Project 1">
-      <p class="caption">Art Project 1</p>
+      <img src="images/mother.jpg" alt="Art Project 1">
+      <p class="caption">mother sining her child to sleep - mixed media on paper - Berlin 2025/02</p>
     </div>
     <div>
-      <img src="images/art02.jpg" alt="Art Project 2">
-      <p class="caption">Art Project 2</p>
+      <img src="images/motheriswatching.jpg" alt="Art Project 2">
+      <p class="caption">mother is watching - mixed media on paper - Berlin 2025/02</p>
     </div>
-    <div>
-      <img src="images/art03.jpg" alt="Art Project 3">
-      <p class="caption">Art Project 3</p>
-    </div>
-    <div>
-      <img src="images/art04.jpg" alt="Art Project 4">
-      <p class="caption">Art Project 4</p>
-    </div>
+  
+    
   </section>
 
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <p>&copy; 2025 CARLOTTA :)</p>
   </footer>
 </body>
 </html>
