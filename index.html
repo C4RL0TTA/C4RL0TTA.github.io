@@ -161,11 +161,16 @@
     slider2.style.transform = `translateX(-${currentSlide2 * 100}%)`;
   }
 </script>
-<script>
+  <script>
+  const colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink"];
+
   document.querySelectorAll('.fortune-quote span').forEach((span, i) => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
     span.style.setProperty('--index', i);
+    span.style.setProperty('color', randomColor);
   });
 </script>
+
 
 </body>
 </html>
