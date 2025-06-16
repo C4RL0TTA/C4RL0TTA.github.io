@@ -61,6 +61,9 @@ section {
 .slide {
   padding: 20px 10px;
 }
+.slider-wrapper {
+  overflow: hidden;
+}
 
 /* === HERO SECTION === */
 #hero {
@@ -420,8 +423,8 @@ footer {
   font-size: 2rem;
   border: none;
   border-radius: 50%;
-  width: 20px
-  height: 20px
+  width: 20px;
+  height: 20px;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
@@ -449,27 +452,62 @@ footer {
 
 /* === MOBILE MEDIA QUERIES === */
 @media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
+  .header {
+    height: 60vh;
   }
-
-  .portrait {
-    margin: 0 auto;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
   .site-title {
-    font-size: 2.7rem;
+    font-size: 2.7rem; /* you already have this */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+  .portrait {
+    width: 150px;
+    height: 150px;
   }
 }
 
 @media (max-width: 480px) {
   .site-title {
     font-size: 2.1rem;
+  }
+}
+@media (max-width: 480px) {
+  .menu-popup {
+    top: 60px;
+    right: 5%;
+    flex-direction: column;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .fortune-quote .space {
+    width: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fortune-quote {
+    font-size: 1.6rem;
+    max-width: 90%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fortune-quote {
+    font-size: 1.2rem;
+  }
+  .fortune-quote .space {
+    width: 5px;
   }
 }
 /* === PROJECT DETAIL PAGE STYLES === */
@@ -483,6 +521,7 @@ footer {
   border: none;
   cursor: pointer;
 }
+
 .close-btn:hover {
   color: #ff69b4;
 }
@@ -498,9 +537,11 @@ footer {
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
+
 .gallery img:hover {
   transform: scale(1.05);
 }
+
 .caption {
   text-align: center;
   font-size: 1rem;
@@ -514,10 +555,6 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  .fortune-quote .space {
-    width: 10px;
-  }
-}
+
 
   .
