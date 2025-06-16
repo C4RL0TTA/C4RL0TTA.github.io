@@ -6,20 +6,26 @@
   <title>Project 1 – Detailed View</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Close button styles */
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 2rem;
-      color: #ff00cc;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-    .close-btn:hover {
-      color: #ff69b4;
-    }
+ /* Close button styles */
+  .close-btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: black;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  z-index: 3;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff032d;
+}
     /* Gallery layout */
     .gallery {
       display: grid;
@@ -50,37 +56,34 @@
 </head>
 <body>
   <header>
-    <button class="close-btn" onclick="window.history.back();">❌</button>
+    <button class="close-btn" onclick="window.history.back();">X)</button>
     <h1>Project 1 – Detailed View</h1>
   </header>
 
   <section class="project-description">
-    <h2>Project Overview</h2>
-    <p>This project showcases...</p>
+    <h2>PORTRAITS :)</h2>
+    <p>One thing that always fascinated me are faces. Especially eyes. I like how eyes can reflect and show us so much about ourselfs if we just take a closeer look. ;)</p>
     <!-- Add more detailed content here -->
   </section>
 
   <section class="gallery">
     <div>
-      <img src="images/art01.jpg" alt="Art Project 1">
-      <p class="caption">Art Project 1</p>
+      <img src="images/portraits01.jpg" alt="Art Project 1">
+      <p class="caption">selfportrait 01 & 02 - mixed media on paper - on the train 2024/08</p>
     </div>
     <div>
-      <img src="images/art02.jpg" alt="Art Project 2">
-      <p class="caption">Art Project 2</p>
+      <img src="images/portraits02.jpg" alt="Art Project 2">
+      <p class="caption">selfportrait 03 & 04 - mixed media on paper - Berlin 2025/03</p>
     </div>
     <div>
-      <img src="images/art03.jpg" alt="Art Project 3">
-      <p class="caption">Art Project 3</p>
+      <img src="images/portraits0303.jpg" alt="Art Project 3">
+      <p class="caption">selfportrait 05 & 06 - mixed media on paper - Berlin 2025/03</p>
     </div>
-    <div>
-      <img src="images/art04.jpg" alt="Art Project 4">
-      <p class="caption">Art Project 4</p>
-    </div>
+    
   </section>
 
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <p>&copy; 2025 CARLOTTA :)</p>
   </footer>
 </body>
 </html>
