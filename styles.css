@@ -32,6 +32,15 @@ header h1 {
   margin: 0;
 }
 
+button,
+.menu-button,
+.slider-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 footer {
   background: #111;
   color: white;
