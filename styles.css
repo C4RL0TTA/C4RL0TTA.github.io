@@ -37,7 +37,7 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
 }
@@ -273,13 +273,15 @@ section {
 /* === FORTUNE QUOTE SECTION === */
 .fortune-section {
   position: relative;
-  padding: 50% 10%;
-  text-align: center;
+  min-height: 400px;
+  padding: 10% 10% 100px;
   background: url('images/cefalu03.jpg') no-repeat center center;
   background-size: cover;
-  background-position: 50% 5%; /* 50% horizontal center, 30% down from top */
+  background-position: center top;
   overflow: hidden;
+  z-index: 1;
 }
+
 
 
 .fortune-quote {
