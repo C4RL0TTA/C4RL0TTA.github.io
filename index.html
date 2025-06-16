@@ -162,17 +162,6 @@
 </script>
   
 <script>
-  let currentSlide2 = 0;
-
-  function moveSlide2(direction) {
-    const slides2 = document.querySelectorAll("#slider2 .slide");
-    const slider2 = document.getElementById("slider2");
-    currentSlide2 = (currentSlide2 + direction + slides2.length) % slides2.length;
-    slider2.style.transform = `translateX(-${currentSlide2 * 100}%)`;
-  }
-</script>
-  
-  <script>
   document.querySelectorAll('.fortune-quote span').forEach((span, i) => {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     span.style.setProperty('--index', i);
@@ -202,6 +191,19 @@
   // Add swipe support for both sliders
   addSwipeSupport("slider", moveSlide);
   addSwipeSupport("slider2", moveSlide2);
+</script>
+  
+<script>
+  let currentSlide2 = 0;
+
+  function moveSlide2(direction) {
+    const slides = document.querySelectorAll("#slider2 .slide");
+    const slider = document.getElementById("slider2");
+    const totalSlides = slides.length;
+
+    currentSlide2 = (currentSlide2 + direction + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${currentSlide2 * 100}%)`;
+  }
 </script>
 
 </body>
