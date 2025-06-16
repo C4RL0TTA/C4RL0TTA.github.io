@@ -161,6 +161,11 @@
     slider2.style.transform = `translateX(-${currentSlide2 * 100}%)`;
   }
 </script>
+<script>
+  document.querySelectorAll('.fortune-quote span').forEach((span, i) => {
+    span.style.setProperty('--index', i);
+  });
+</script>
 
 </body>
 </html>
