@@ -277,6 +277,7 @@ section {
   text-align: center;
   background: url('images/cefalu03.jpg') no-repeat center center;
   background-size: cover;
+  background-position: 50% 10%; /* 50% horizontal center, 30% down from top */
   overflow: hidden;
 }
 
