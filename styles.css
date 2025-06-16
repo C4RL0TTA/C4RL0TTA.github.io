@@ -273,7 +273,7 @@ section {
 /* === FORTUNE QUOTE SECTION === */
 .fortune-section {
   padding: 10% 10%;
-  text-align: center; 
+  text-align: center;
   background: transparent;
 }
 
@@ -294,22 +294,21 @@ section {
   display: inline-block;
   animation: twinkle 2s infinite ease-in-out;
   animation-delay: calc(var(--i) * 0.1s);
+  color: white; /* default */
 }
 
-/* Assign each span a delay index via JavaScript (see below) */
-.fortune-quote span:nth-child(n) {
-  --i: calc(var(--index, 0));
-}
-
+/* Twinkle with fading + size + color shift */
 @keyframes twinkle {
-  50% { color: yellow; opacity: 0.5; transform: scale(1.1); }
-  50% { color: orange; opacity: 0.5; transform: scale(1.1); }
-  50% { color: red; opacity: 0.5; transform: scale(1.1); }
-  50% { color: pink; opacity: 0.5; transform: scale(1.1); }
-  50% { color: purple; opacity: 0.5; transform: scale(1.1); }
-  50% { color: blue; opacity: 0.5; transform: scale(1.1); }
-  50% { color: green; opacity: 0.5; transform: scale(1.1); }
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
 }
+
 
 
 /* === FOOTER === */
