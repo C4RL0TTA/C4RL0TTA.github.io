@@ -64,6 +64,80 @@ section {
 .slider-wrapper {
   overflow: hidden;
 }
+.slider-section {
+  position: relative;
+  padding: 40px 0;
+  overflow: hidden;
+  background: white;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+  overflow: visible;
+}
+
+.slide {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slide p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: black;
+}
+
+.slider-button {
+  background: rgba(0, 0, 0, 1.0);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  position: absolute;
+  left: 5%;
+}
+
+.next {
+  position: absolute;
+  right: 5%;
+}
+
+@media (max-width: 600px) {
+  .slider-button {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+  .slide p {
+    font-size: 0.85rem;
+  }
+}
 
 /* === HERO SECTION === */
 #hero {
@@ -375,80 +449,7 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
 }
-.slider-section {
-  position: relative;
-  padding: 40px 0;
-  overflow: hidden;
-  background: white;
-}
 
-.slider-wrapper {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  width: 100%;
-  overflow: visible;
-}
-
-.slide {
-  flex: 0 0 100%;
-  text-align: center;
-  padding: 10px;
-}
-
-.slide img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.slide p {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: black;
-}
-
-.slider-button {
-  background: rgba(0, 0, 0, 1.0);
-  color: white;
-  font-size: 2rem;
-  border: none;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.prev {
-  position: absolute;
-  left: 5%;
-}
-
-.next {
-  position: absolute;
-  right: 5%;
-}
-
-@media (max-width: 600px) {
-  .slider-button {
-    font-size: 1.5rem;
-    padding: 8px;
-  }
-  .slide p {
-    font-size: 0.85rem;
-  }
-}
 
 /* === MOBILE MEDIA QUERIES === */
 @media (max-width: 768px) {
@@ -513,17 +514,22 @@ footer {
 /* === PROJECT DETAIL PAGE STYLES === */
 .close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 5%;
+  right: 5%;
+  background: black;
+  color: white;
   font-size: 2rem;
-  color: #ff00cc;
-  background: none;
   border: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  z-index: 3;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .close-btn:hover {
-  color: #ff69b4;
+  color: #ff032d;
 }
 
 .gallery {
