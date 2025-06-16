@@ -40,6 +40,30 @@ button,
   justify-content: center;
   text-align: center;
 }
+#truth {
+  background-color: #111;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.truth-container {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#truth a {
+  color: #f0e68c;
+  text-decoration: underline;
+  margin: 0 8px;
+}
+
+#truth a:hover {
+  color: white;
+}
+
 
 footer {
   background: #111;
