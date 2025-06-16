@@ -273,7 +273,7 @@ section {
 /* === FORTUNE QUOTE SECTION === */
 .fortune-section {
   position: relative;
-  padding: 10% 10%;
+  padding: 5% 10%;
   text-align: center;
   background: url('images/cefalu03.jpg') no-repeat center center;
   background-size: cover;
