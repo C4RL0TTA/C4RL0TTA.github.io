@@ -303,7 +303,13 @@ section {
 
 @keyframes twinkle {
   0%, 100% { color: white; opacity: 1; transform: scale(1); }
-  50% { color: #ffd1fa; opacity: 0.5; transform: scale(1.1); }
+  50% { color: yellow; opacity: 0.5; transform: scale(1.1); }
+  50% { color: orange; opacity: 0.5; transform: scale(1.1); }
+  50% { color: red; opacity: 0.5; transform: scale(1.1); }
+  50% { color: pink; opacity: 0.5; transform: scale(1.1); }
+  50% { color: purple; opacity: 0.5; transform: scale(1.1); }
+  50% { color: blue; opacity: 0.5; transform: scale(1.1); }
+  50% { color: green; opacity: 0.5; transform: scale(1.1); }
 }
 
 
