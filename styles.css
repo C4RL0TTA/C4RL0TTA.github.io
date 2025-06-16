@@ -70,17 +70,21 @@ section {
 .slide {
   padding: 20px 10px;
 }
-.slider-wrapper {
-  overflow: hidden;
-}
+
 .slider-section {
   position: relative;
-  padding: 40px 0;
+  padding: 40px 10px;
+  margin: 0 auto;
+  max-width: 100%;
   overflow: hidden;
   background: white;
 }
 
 .slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
   position: relative;
   max-width: 100%;
   margin: 0 auto;
@@ -91,22 +95,26 @@ section {
 
 .slider {
   display: flex;
+  flex-wrap: nowrap;
   transition: transform 0.4s ease-in-out;
   width: 100%;
-  overflow: visible;
+  overflow-x: hidden;
 }
 
 .slide {
   flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   text-align: center;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .slide img {
-  width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
+  display: block;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 .slide p {
