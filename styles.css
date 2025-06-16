@@ -270,6 +270,47 @@ section {
 .about-text {
   max-width: 600px;
 }
+/* === FORTUNE QUOTE SECTION === */
+.fortune-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: transparent;
+}
+
+.fortune-quote {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: rainbow 8s linear infinite;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease forwards, rainbow 8s linear infinite;
+}
+
+/* Fade-in slide-up effect */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Rainbow animation already in your CSS */
+@keyframes rainbow {
+  0%   { color: white; }
+  14%  { color: red; }
+  28%  { color: orange; }
+  42%  { color: yellow; }
+  57%  { color: green; }
+  71%  { color: blue; }
+  85%  { color: purple; }
+  100% { color: pink; }
+}
+
 
 /* === FOOTER === */
 footer {
