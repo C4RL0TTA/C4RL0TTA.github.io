@@ -134,6 +134,16 @@
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
   }
 </script>
+<script>
+  let currentSlide2 = 0;
+
+  function moveSlide2(direction) {
+    const slides2 = document.querySelectorAll("#slider2 .slide");
+    const slider2 = document.getElementById("slider2");
+    currentSlide2 = (currentSlide2 + direction + slides2.length) % slides2.length;
+    slider2.style.transform = `translateX(-${currentSlide2 * 100}%)`;
+  }
+</script>
 
 </body>
 </html>
