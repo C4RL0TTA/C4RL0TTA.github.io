@@ -304,14 +304,59 @@ section {
 /* Twinkle with fading + size + color shift */
 @keyframes twinkle {
   0%, 100% {
-    opacity: 1;
     transform: scale(1);
+    opacity: 1;
   }
   50% {
-    opacity: 0.6;
     transform: scale(1.1);
+    opacity: 0.5;
   }
 }
+.fortune-quote span {
+  display: inline-block;
+  animation: twinkle 2.5s infinite ease-in-out;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+/* Color animation cycles */
+.fortune-quote span:nth-child(7n+1) { color: red; animation-name: twinkle-red; }
+.fortune-quote span:nth-child(7n+2) { color: orange; animation-name: twinkle-orange; }
+.fortune-quote span:nth-child(7n+3) { color: yellow; animation-name: twinkle-yellow; }
+.fortune-quote span:nth-child(7n+4) { color: green; animation-name: twinkle-green; }
+.fortune-quote span:nth-child(7n+5) { color: blue; animation-name: twinkle-blue; }
+.fortune-quote span:nth-child(7n+6) { color: purple; animation-name: twinkle-purple; }
+.fortune-quote span:nth-child(7n+7) { color: pink; animation-name: twinkle-pink; }
+
+/* Keyframes per color to cycle */
+@keyframes twinkle-red {
+  0%, 100% { color: red; }
+  50% { color: orange; }
+}
+@keyframes twinkle-orange {
+  0%, 100% { color: orange; }
+  50% { color: yellow; }
+}
+@keyframes twinkle-yellow {
+  0%, 100% { color: yellow; }
+  50% { color: green; }
+}
+@keyframes twinkle-green {
+  0%, 100% { color: green; }
+  50% { color: blue; }
+}
+@keyframes twinkle-blue {
+  0%, 100% { color: blue; }
+  50% { color: purple; }
+}
+@keyframes twinkle-purple {
+  0%, 100% { color: purple; }
+  50% { color: pink; }
+}
+@keyframes twinkle-pink {
+  0%, 100% { color: pink; }
+  50% { color: red; }
+}
+
 .liquid-overlay {
   position: absolute;
   top: 0;
