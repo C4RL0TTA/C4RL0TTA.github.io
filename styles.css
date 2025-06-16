@@ -272,8 +272,8 @@ section {
 }
 /* === FORTUNE QUOTE SECTION === */
 .fortune-section {
-  padding: 20px 20px;
-  text-align: center;
+  padding: 10% 10%;
+  text-align: center; 
   background: transparent;
 }
 
@@ -302,7 +302,6 @@ section {
 }
 
 @keyframes twinkle {
-  0%, 100% { color: white; opacity: 1; transform: scale(1); }
   50% { color: yellow; opacity: 0.5; transform: scale(1.1); }
   50% { color: orange; opacity: 0.5; transform: scale(1.1); }
   50% { color: red; opacity: 0.5; transform: scale(1.1); }
