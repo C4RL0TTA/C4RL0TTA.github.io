@@ -6,20 +6,26 @@
   <title>Project 1 – Detailed View</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Close button styles */
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 2rem;
-      color: #ff00cc;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-    .close-btn:hover {
-      color: #ff69b4;
-    }
+ /* Close button styles */
+  .close-btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: black;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  z-index: 3;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff032d;
+}
     /* Gallery layout */
     .gallery {
       display: grid;
@@ -50,37 +56,57 @@
 </head>
 <body>
   <header>
-    <button class="close-btn" onclick="window.history.back();">❌</button>
+    <button class="close-btn" onclick="window.history.back();">X)</button>
     <h1>Project 1 – Detailed View</h1>
   </header>
 
   <section class="project-description">
-    <h2>Project Overview</h2>
-    <p>This project showcases...</p>
+    <h2>PORTRAITS :)</h2>
+    <p>Faces draw me in — especially the eyes.
+They’re quiet storytellers,
+mirroring what we hide and what we seek.
+Look closely ;)
+and they might show you something about yourself, too.</p>
     <!-- Add more detailed content here -->
   </section>
 
   <section class="gallery">
     <div>
-      <img src="images/art01.jpg" alt="Art Project 1">
-      <p class="caption">Art Project 1</p>
+      <img src="images/image01.jpg" alt="Art Project 1">
+      <p class="caption">sunlight and a suttle wind on water - acryl on paper - berlin 2023/06</p>
     </div>
     <div>
-      <img src="images/art02.jpg" alt="Art Project 2">
-      <p class="caption">Art Project 2</p>
+      <img src="images/image03.jpg" alt="Art Project 2">
+      <p class="caption">something growing - mixed media on paper - berlin 2023/07</p>
     </div>
     <div>
-      <img src="images/art03.jpg" alt="Art Project 3">
-      <p class="caption">Art Project 3</p>
+      <img src="images/image04.jpg" alt="Art Project 3">
+      <p class="caption">inside outside - mixed media on carton - Berlin 2023/05</p>
     </div>
     <div>
-      <img src="images/art04.jpg" alt="Art Project 4">
-      <p class="caption">Art Project 4</p>
+      <img src="images/image05.jpg" alt="Art Project 3">
+      <p class="caption">something from inside - acryl on carton - Berlin 2023/05</p>
+    </div>
+     <div>
+      <img src="images/image10.jpg" alt="Art Project 3">
+      <p class="caption">blackhole - mixed media on carton - Berlin 2023/07</p>
+    </div>
+    <div>
+      <img src="images/image11.jpg" alt="Art Project 3">
+      <p class="caption">somethingmoving and upclose - mixed media on carton - Berlin 2023/05</p>
+    </div>
+     <div>
+      <img src="images/image15.jpg" alt="Art Project 3">
+      <p class="caption">how matter behaves in sunlight- acryl on carton - Berlin 2023/07</p>
+    </div>
+     <div>
+      <img src="images/image04.jpg" alt="Art Project 3">
+      <p class="caption">inside outside - mixed media on carton - Berlin 2023/05</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <p>&copy; All artworks © 2025 CARLOTTA :)</p>
   </footer>
 </body>
 </html>
