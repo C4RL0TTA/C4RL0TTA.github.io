@@ -282,8 +282,6 @@ section {
   z-index: 1;
 }
 
-
-
 .fortune-quote {
   font-size: 2.2rem;
   font-weight: bold;
@@ -295,6 +293,11 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2px;
+}
+
+.fortune-quote .space {
+  width: 20px;
+  display: inline-block;
 }
 
 .fortune-quote span {
@@ -508,6 +511,12 @@ footer {
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .fortune-quote .space {
+    width: 10px;
   }
 }
 
